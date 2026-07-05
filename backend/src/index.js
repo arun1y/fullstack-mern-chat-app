@@ -7,12 +7,13 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import {app, server} from "./lib/socket.js"
 
+
 import path from "path";
 
 
 dotenv.config();
 const PORT=process.env.PORT;
-const __idrname = path.resolve();
+const __dirname = path.resolve();
 
 app.use(express.json({ limit: "10mb" }));
 app.use(express.urlencoded({ limit: "10mb", extended: true }));
